@@ -132,8 +132,9 @@ function accelerate(n) {
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 <button onclick="toggleFullscreen()">FULLSCREEN</button>
-<p>Use the ACCELERATE button to stay in the air</p>
+<p>Use the ACCELERATE button, space bar or arrow key to stay in the air</p>
 <p>How long can you stay alive?</p>
+<p>Game created by the macbooksuck dev team</p>
 
 <script>
 function toggleFullscreen() {
@@ -150,6 +151,18 @@ function toggleFullscreen() {
     }
   }
 }
+</script>
+<script>
+document.addEventListener("keydown", function(e) {
+  if (e.code === "Space" || e.code === "ArrowUp") {
+    accelerate(-0.2); // simulate button hold
+  }
+});
+document.addEventListener("keyup", function(e) {
+  if (e.code === "Space" || e.code === "ArrowUp") {
+    accelerate(0.05); // simulate button release
+  }
+});
 </script>
 </body>
 </html>
