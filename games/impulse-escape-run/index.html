@@ -10,11 +10,13 @@ canvas {
 </style>
 </head>
 <body onload="startGame()">
+<img id="background" src="garden.jpg" style="display:none;">
 <script>
 
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+var backgroundX = 0;
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
@@ -98,6 +100,19 @@ function updateGameArea() {
         } 
     }
     myGameArea.clear();
+    ctx = myGameArea.context;
+let bg = document.getElementById("background");
+
+// scroll the background
+backgroundX -= 1; // Speed of scroll
+if (backgroundX <= -myGameArea.canvas.width) {
+    backgroundX = 0;
+}
+
+// draw two copies of the image side-by-side
+ctx.drawImage(bg, backgroundX, 0, myGameArea.canvas.width, myGameArea.canvas.height);
+ctx.drawImage(bg, backgroundX + myGameArea.canvas.width, 0, myGameArea.canvas.width, myGameArea.canvas.height);
+
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
         x = myGameArea.canvas.width;
