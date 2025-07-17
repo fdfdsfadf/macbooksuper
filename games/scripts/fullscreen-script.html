@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/dmca.css">
   <style>
     body {
-      background-color: #002D6F;
+      background-color: #002d6f;
     }
 
     .top-nav {
@@ -32,6 +32,7 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
+
     button:hover {
       background-color: #0a58ca;
     }
@@ -44,6 +45,23 @@
       display: block;
       border-radius: 8px;
       overflow-x: auto;
+    }
+
+    .video-showcase {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .video-showcase p {
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .video-showcase iframe {
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      max-width: 100%;
     }
   </style>
 </head>
@@ -70,8 +88,15 @@
       📎 Copy to Clipboard
     </button>
     <p class="mt-3">
-      To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. Your screen should go fullscreen instantly, with tabs hidden! <strong>Only works on Edge, and must be executed while viewing an actual webpage.</strong>
+      To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. Your screen should go fullscreen instantly, with tabs hidden! <strong>ONLY ON EDGE AND YOU HAVE TO BE VIEWING A WEBSITE TO WORK</strong>
     </p>
+
+    <div class="video-showcase">
+      <p>Showcase</p>
+      <h2 class="h5 fw-semibold mb-3">📺 Tutorial Video</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VTsFr3l05l4"
+        title="Fullscreen Script Tutorial" frameborder="0" allowfullscreen></iframe>
+    </div>
   </main>
 
   <footer class="text-center py-4">
