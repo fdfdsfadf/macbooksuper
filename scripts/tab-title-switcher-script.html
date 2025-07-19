@@ -82,13 +82,14 @@
       You know how it’s always annoying when you’re doing work and a teacher walks by... and even if you press <kbd>fn + F</kbd>, the tabs still show! Well, I’ve made a special script that works across browsers. When executed, it fully hides your tabs and goes fullscreen.
     </p>
 
-    <h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
-    <pre><code id="tabtitleswitchercode>const pageTitle = "Class Notes - Week 4";
+<h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
+<pre><code id="tabtitleswitchercode">const pageTitle = "Class Notes - Week 4";
 (function(){ eval(atob("Y29uc3QgdCA9IGFyZ3VtZW50c1swXTsgZG9jdW1lbnQudGl0bGUgPSB0Ow==")) })(pageTitle);
 </code></pre>
-    <button onclick="navigator.clipboard.writeText(document.getElementById('tabtitleswitchercode').innerText)">
-      📎 Copy to Clipboard
-    </button>
+
+<button onclick="navigator.clipboard.writeText(document.getElementById('tabtitleswitchercode').innerText)">
+  📎 Copy to Clipboard
+</button>
     <p class="mt-3">
       To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. Your screen should go fullscreen instantly, with tabs hidden! <strong>ONLY ON EDGE AND YOU HAVE TO BE VIEWING A WEBSITE TO WORK</strong>
     </p>
