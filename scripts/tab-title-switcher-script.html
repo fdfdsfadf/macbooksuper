@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>mySBC</title>
+  <meta name="description" content="Fullscreen Script Utility">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/dmca.css">
+  <style>
+    body {
+      background-color: #002d6f;
+    }
+
+    .top-nav {
+      background-color: #4A87FF;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 18px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0a58ca;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      font-size: 0.9rem;
+      background-color: rgba(255,255,255,0.05);
+      padding: 12px;
+      display: block;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .video-showcase {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .video-showcase p {
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .video-showcase iframe {
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body class="dmca-page">
+  <nav class="navbar navbar-dark top-nav">
+    <div class="container">
+      <a class="navbar-brand mx-auto" href="/">macbooksuck.xyz</a>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="section-title text-center">Fullscreen Script</h1>
+    <p class="text-center fst-italic text-muted small mb-4">
+      A macbooksuck's script
+    </p>
+
+    <p>
+      You know how it’s always annoying when you’re doing work and a teacher walks by... and even if you press <kbd>fn + F</kbd>, the tabs still show! Well, I’ve made a special script that works across browsers. When executed, it fully hides your tabs and goes fullscreen.
+    </p>
+
+    <h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
+    <pre><code id="tabtitleswitchercode>const pageTitle = "Class Notes - Week 4";
+(function(){ eval(atob("Y29uc3QgdCA9IGFyZ3VtZW50c1swXTsgZG9jdW1lbnQudGl0bGUgPSB0Ow==")) })(pageTitle);
+</code></pre>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('tabtitleswitchercode').innerText)">
+      📎 Copy to Clipboard
+    </button>
+    <p class="mt-3">
+      To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. Your screen should go fullscreen instantly, with tabs hidden! <strong>ONLY ON EDGE AND YOU HAVE TO BE VIEWING A WEBSITE TO WORK</strong>
+    </p>
+
+    <div class="video-showcase">
+      <p>Showcase</p>
+      <h2 class="h5 fw-semibold mb-3">📺 Tutorial Video</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3T5kgWNNM4E"
+        title="Fullscreen Script Tutorial" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <footer class="text-center py-4">
+    <div class="container">
+      <small>macbooksuck.xyz</small>
+    </div>
+  </footer>
+</body>
+</html>
