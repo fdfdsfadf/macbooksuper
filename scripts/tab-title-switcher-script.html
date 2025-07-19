@@ -45,6 +45,7 @@
       display: block;
       border-radius: 8px;
       overflow-x: auto;
+      white-space: pre-wrap;
     }
 
     .video-showcase {
@@ -58,7 +59,7 @@
       margin-bottom: 8px;
     }
 
-    .video-showcase iframe {
+    video {
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
       max-width: 100%;
@@ -82,14 +83,15 @@
       This is if you want to change what your tab title is. macbooksuck.xyz already has tab title protection but if you are playing on another game this script can help you as well. It is a universal script that I created.
     </p>
 
-<h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
-<pre><code id="tabtitleswitchercode">const pageTitle = "(Make this any tab title you want make sure to not include the bracket in the quotation mark)";
+    <h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
+    <pre><code id="tabtitleswitchercode">const pageTitle = "(Make this any tab title you want make sure to not include the bracket in the quotation mark)";
 (function(){ eval(atob("Y29uc3QgdCA9IGFyZ3VtZW50c1swXTsgZG9jdW1lbnQudGl0bGUgPSB0Ow==")) })(pageTitle);
 </code></pre>
 
-<button onclick="navigator.clipboard.writeText(document.getElementById('tabtitleswitchercode').innerText)">
-  📎 Copy to Clipboard
-</button>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('tabtitleswitchercode').innerText); alert('✔️ Script copied!');">
+      📎 Copy to Clipboard
+    </button>
+
     <p class="mt-3">
       To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. The tab you used the script on should change its title immediately <strong>ONLY ON EDGE AND YOU HAVE TO BE VIEWING A WEBSITE TO WORK</strong>
     </p>
@@ -97,8 +99,10 @@
     <div class="video-showcase">
       <p>Showcase</p>
       <h2 class="h5 fw-semibold mb-3">📺 Tutorial Video</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NZvkMenUOgA"
-        title="Fullscreen Script Tutorial" frameborder="0" allowfullscreen></iframe>
+      <video controls width="560" height="315">
+        <source src="assets/Tab-title-switcher.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </main>
 
