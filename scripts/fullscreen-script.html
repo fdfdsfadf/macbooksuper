@@ -45,6 +45,7 @@
       display: block;
       border-radius: 8px;
       overflow-x: auto;
+      white-space: pre-wrap;
     }
 
     .video-showcase {
@@ -58,7 +59,7 @@
       margin-bottom: 8px;
     }
 
-    .video-showcase iframe {
+    video {
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
       max-width: 100%;
@@ -84,7 +85,7 @@
 
     <h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
     <pre><code id="fullscreenCode">eval(atob("KGZ1bmN0aW9uKCkgeyAoZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnJlcXVlc3RGdWxsc2NyZWVuIHx8IGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC53ZWJraXRSZXF1ZXN0RnVsbHNjcmVlbiB8fCBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQubW96UmVxdWVzdEZ1bGxzY3JlZW4gfHwgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50Lm1zUmVxdWVzdEZ1bGxzY3JlZWVuKS5jYWxsKGRvY3VtZW50LmRvY3VtZW50RWxlbWVudCk7IH0pKCk7"))</code></pre>
-    <button onclick="navigator.clipboard.writeText(document.getElementById('fullscreenCode').innerText)">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('fullscreenCode').innerText); alert('✔️ Script copied!');">
       📎 Copy to Clipboard
     </button>
     <p class="mt-3">
@@ -94,8 +95,10 @@
     <div class="video-showcase">
       <p>Showcase</p>
       <h2 class="h5 fw-semibold mb-3">📺 Tutorial Video</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/3T5kgWNNM4E"
-        title="Fullscreen Script Tutorial" frameborder="0" allowfullscreen></iframe>
+      <video controls width="560" height="315">
+        <source src="assets/Showcase.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </main>
 
