@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>mySBC</title>
-  <meta name="description" content="FakeloadingoverlatScript">
+  <meta name="description" content="Fullscreen Script Utility">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,19 +84,23 @@
     </p>
 
     <h2 class="h5 fw-semibold mt-4">📋 Copy the Script</h2>
-    <pre><code id="toggleinvertedCode">const message = "<h1>(Make this what you want the Loading screen to say remove the brackets)</h1>"; eval(atob("ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9bWVzc2FnZTs="));</code></pre>
-    <button onclick="navigator.clipboard.writeText(document.getElementById('toggleinvertedCode').innerText); alert('✔️ Script copied!');">
+    <pre><code id="tabtitleswitchercode">const pageTitle = "(Make this what you want the Loading screen to say remove the brackets)";
+(function(){ eval(atob("ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9bWVzc2FnZTs==")) })(pageTitle);
+</code></pre>
+
+    <button onclick="navigator.clipboard.writeText(document.getElementById('tabtitleswitchercode').innerText); alert('✔️ Script copied!');">
       📎 Copy to Clipboard
     </button>
+
     <p class="mt-3">
-      To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. The page you are on should go inverted colours instantly! <strong>ONLY ON EDGE AND YOU HAVE TO BE VIEWING A WEBSITE TO WORK</strong>
+      To use the script, simply open your browser’s Developer Console by pressing <kbd>F12</kbd> or <kbd>Ctrl + Shift + I</kbd> (or <kbd>Cmd + Option + I</kbd> on Mac). Then, switch to the “Console” tab, paste the copied code, and hit <kbd>Enter</kbd>. The tab you used the script on should change its title immediately <strong>ONLY ON EDGE AND YOU HAVE TO BE VIEWING A WEBSITE TO WORK</strong>
     </p>
 
     <div class="video-showcase">
       <p>Showcase</p>
       <h2 class="h5 fw-semibold mb-3">📺 Tutorial Video</h2>
       <video controls width="560" height="315">
-        <source src="assets/Toggle-inverted-script.mp4" type="video/mp4">
+        <source src="assets/Tab-title-switcher.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
