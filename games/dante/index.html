@@ -16,5 +16,32 @@
       )();
     </script>
     <script src="/js/main.js"></script>
+    <script>
+(function() {
+    const PARENT_DOMAIN = "https://main1.macbooksuck.xyz"; 
+
+    window.addEventListener("message", (event) => {
+        if (event.origin !== PARENT_DOMAIN) return;
+        if (event.data.type === "LOAD_SAVE") {
+            const data = event.data.payload;
+            Object.keys(data).forEach(key => localStorage.setItem(key, data[key]));
+            console.log("[Bridge] Save Loaded");
+        }
+    });
+
+    const originalSetItem = localStorage.setItem;
+    localStorage.setItem = function(key, value) {
+        originalSetItem.apply(this, arguments);
+        const uniqueGameId = window.location.hostname + window.location.pathname;
+        window.parent.postMessage({
+            type: "GAME_SAVE",
+            key: key,
+            value: value,
+            gameId: uniqueGameId 
+        }, PARENT_DOMAIN);
+    };
+})();
+</script>
+    
   </body>
 </html>
